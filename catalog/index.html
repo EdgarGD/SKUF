@@ -1,108 +1,1079 @@
 <!DOCTYPE html>
 <html lang="ru">
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Каталог</title>
-    <meta name="description"
-          content="Каталог"/>
+    <meta name="description" content="Каталог" />
     <meta name="keywords" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <meta property="og:title" content="Каталог" />
     <meta property="og:description" content="" />
-    <meta property="og:image" content="../assets/img/1031726e-e66e-4aa9-86a9-1ab500f4cdf5-13131008.png" />
+    <meta
+      property="og:image"
+      content="../assets/img/1031726e-e66e-4aa9-86a9-1ab500f4cdf5-13131008.png"
+    />
 
     <meta name="twitter:title" content="Каталог" />
     <meta name="twitter:description" content="" />
-    <meta name="twitter:image" content="../assets/img/1031726e-e66e-4aa9-86a9-1ab500f4cdf5-13131008.png" />
+    <meta
+      name="twitter:image"
+      content="../assets/img/1031726e-e66e-4aa9-86a9-1ab500f4cdf5-13131008.png"
+    />
     <meta name="twitter:card" content="summary_large_image" />
 
+    <link rel="preconnect" href="https://259506.selcdn.ru" />
 
+    <link rel="stylesheet" href="../assets/styles/styles-core.css" />
 
-        <link rel="preconnect" href="https://259506.selcdn.ru" />
+    <link
+      rel="apple-touch-icon"
+      sizes="128x128"
+      href="https://s.tb.ru/images/favicons/tb.svg"
+    />
+    <link rel="shortcut icon" href="https://s.tb.ru/images/favicons/tb.svg" />
+    <link
+      rel="stylesheet"
+      href="https://s.tb.ru/uploads/fonts/raleway/bold.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family&#x3D;Roboto&amp;subset&#x3D;all&amp;display&#x3D;swap"
+    />
 
-        <link rel="stylesheet" href="../assets/styles/styles-core.css" />
+    <script>
+      partytown = {
+        lib: "/partytown/",
+        forward: ["dataLayer.push"],
+        resolveUrl: (url) => {
+          if (
+            `${url.host}${url.pathname}` ===
+            "www.google-analytics.com/analytics.js"
+          ) {
+            return new URL(`${location.origin}/partytown/google-analytics.js`);
+          }
 
-        <link rel="apple-touch-icon" sizes="128x128" href="https://s.tb.ru/images/favicons/tb.svg">
-        <link rel="shortcut icon" href="https://s.tb.ru/images/favicons/tb.svg">
-        <link rel="stylesheet" href="https://s.tb.ru/uploads/fonts/raleway/bold.css">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family&#x3D;Roboto&amp;subset&#x3D;all&amp;display&#x3D;swap">
+          return url;
+        },
+      };
+    </script>
+    <script>
+      !(function (w, p, f, c) {
+        if (!window.crossOriginIsolated && !navigator.serviceWorker) return;
+        c = w[p] = w[p] || {};
+        c[f] = c[f] || [];
+      })(
+        window,
+        "partytown",
+        "forward"
+      ); /* Partytown 0.10.3-dev1734732935152 - MIT builder.io */
+      const t = { preserveBehavior: !1 },
+        e = (e) => {
+          if ("string" == typeof e) return [e, t];
+          const [n, r = t] = e;
+          return [n, { ...t, ...r }];
+        },
+        n = Object.freeze(
+          ((t) => {
+            const e = new Set();
+            let n = [];
+            do {
+              Object.getOwnPropertyNames(n).forEach((t) => {
+                "function" == typeof n[t] && e.add(t);
+              });
+            } while ((n = Object.getPrototypeOf(n)) !== Object.prototype);
+            return Array.from(e);
+          })()
+        );
+      !(function (t, r, o, i, a, s, c, d, l, p, u = t, f) {
+        function h() {
+          f ||
+            ((f = 1),
+            "/" ==
+              (c = (s.lib || "/~partytown/") + (s.debug ? "debug/" : ""))[0] &&
+              ((l = r.querySelectorAll('script[type="text/partytown"]')),
+              i != t
+                ? i.dispatchEvent(new CustomEvent("pt1", { detail: t }))
+                : ((d = setTimeout(v, 999999999)),
+                  r.addEventListener("pt0", w),
+                  a
+                    ? y(1)
+                    : o.serviceWorker
+                    ? o.serviceWorker
+                        .register(c + (s.swPath || "partytown-sw.js"), {
+                          scope: c,
+                        })
+                        .then(function (t) {
+                          t.active
+                            ? y()
+                            : t.installing &&
+                              t.installing.addEventListener(
+                                "statechange",
+                                function (t) {
+                                  "activated" == t.target.state && y();
+                                }
+                              );
+                        }, console.error)
+                    : v())));
+        }
+        function y(e) {
+          (p = r.createElement(e ? "script" : "iframe")),
+            (t._pttab = Date.now()),
+            e ||
+              ((p.style.display = "block"),
+              (p.style.width = "0"),
+              (p.style.height = "0"),
+              (p.style.border = "0"),
+              (p.style.visibility = "hidden"),
+              p.setAttribute("aria-hidden", !0)),
+            (p.src =
+              c +
+              "partytown-" +
+              (e
+                ? "atomics.js?v=0.10.3-dev1734732935152"
+                : "sandbox-sw.html?" + t._pttab)),
+            r.querySelector(s.sandboxParent || "body").appendChild(p);
+        }
+        function v(n, o) {
+          for (
+            w(),
+              i == t &&
+                (s.forward || []).map(function (n) {
+                  const [r] = e(n);
+                  delete t[r.split(".")[0]];
+                }),
+              n = 0;
+            n < l.length;
+            n++
+          )
+            ((o = r.createElement("script")).innerHTML = l[n].innerHTML),
+              (o.nonce = s.nonce),
+              r.head.appendChild(o);
+          p && p.parentNode.removeChild(p);
+        }
+        function w() {
+          clearTimeout(d);
+        }
+        (s = t.partytown || {}),
+          i == t &&
+            (s.forward || []).map(function (r) {
+              const [o, { preserveBehavior: i }] = e(r);
+              (u = t),
+                o.split(".").map(function (e, r, o) {
+                  var a;
+                  u = u[o[r]] =
+                    r + 1 < o.length
+                      ? u[o[r]] || ((a = o[r + 1]), n.includes(a) ? [] : {})
+                      : (() => {
+                          let e = null;
+                          if (i) {
+                            const { methodOrProperty: n, thisObject: r } = ((
+                              t,
+                              e
+                            ) => {
+                              let n = t;
+                              for (let t = 0; t < e.length - 1; t += 1)
+                                n = n[e[t]];
+                              return {
+                                thisObject: n,
+                                methodOrProperty:
+                                  e.length > 0 ? n[e[e.length - 1]] : void 0,
+                              };
+                            })(t, o);
+                            "function" == typeof n &&
+                              (e = (...t) => n.apply(r, ...t));
+                          }
+                          return function () {
+                            let n;
+                            return (
+                              e && (n = e(arguments)),
+                              (t._ptf = t._ptf || []).push(o, arguments),
+                              n
+                            );
+                          };
+                        })();
+                });
+            }),
+          "complete" == r.readyState
+            ? h()
+            : (t.addEventListener("DOMContentLoaded", h),
+              t.addEventListener("load", h));
+      })(window, document, navigator, top, window.crossOriginIsolated);
+    </script>
+  </head>
 
+  <body
+    class="sb-body sb-body_with-footer raleway-bold__title roboto-regular sb-content-size_m sb-buttons-border_semi-round"
+  >
+    <div class="site-wrapper" tabindex="0">
+      <section
+        data-type="header"
+        id="zhryjnt"
+        class="s-header-type-1 sb-text-dark"
+      >
+        <link
+          id="header-type-1"
+          rel="stylesheet"
+          href="../assets/styles/header-type-1.css"
+        />
+        <div class="sb-background" style="background: #ffffff"></div>
+        <div class="sb-container">
+          <div
+            class="s-header-type-1__wrapper js-wrapper s-header-type-1__wrapper_right-align-links"
+          >
+            <div
+              class="s-header-type-1__burger js-burger s-header-type-1__mark-links s-header-type-1__mark-button"
+            >
+              <span class="s-header-type-1__burger-line"></span>
+            </div>
+            <a
+              href="/"
+              target="_self"
+              class="sb-logotype-wrapper sb-logotype-wrapper_adaptive_size-m"
+              ><img
+                class="lazy sb-logotype-wrapper__image"
+                src="../assets/img/1031726e-e66e-4aa9-86a9-1ab500f4cdf5-13131008.png"
+                alt="Изображение"
+            /></a>
+            <div class="s-header-type-1__menu-wrapper js-menu">
+              <nav class="s-header-type-1__menu">
+                <div
+                  class="sb-background sb-background"
+                  style="background: #ffffff"
+                ></div>
+                <ul class="s-header-type-1__link-wrapper">
+                  <li class="s-header-type-1__link-item sb-submenu-link">
+                    <a
+                      href="https://skuf.tb.ru"
+                      class="s-header-type-1__link sb-font-p3"
+                    >
+                      Главная
+                    </a>
+                  </li>
+                  <li class="s-header-type-1__link-item sb-submenu-link">
+                    <a
+                      href="https://skuf.tb.ru/catalog"
+                      class="s-header-type-1__link sb-font-p3"
+                    >
+                      Каталог
+                    </a>
+                  </li>
+                  <li class="s-header-type-1__link-item sb-submenu-link">
+                    <a
+                      href="https://skuf.tb.ru/delivery-payment"
+                      class="s-header-type-1__link sb-font-p3"
+                    >
+                      Доставка и оплата
+                    </a>
+                  </li>
+                  <li class="s-header-type-1__link-item sb-submenu-link">
+                    <a
+                      href="https://skuf.tb.ru/returns"
+                      class="s-header-type-1__link sb-font-p3"
+                    >
+                      Обмен и возврат
+                    </a>
+                  </li>
+                  <li class="s-header-type-1__link-item sb-submenu-link">
+                    <a
+                      href="https://skuf.tb.ru/brand"
+                      class="s-header-type-1__link sb-font-p3"
+                    >
+                      О нас
+                    </a>
+                  </li>
+                  <li class="s-header-type-1__link-item sb-submenu-link">
+                    <a
+                      href="https://skuf.tb.ru/contacts"
+                      class="s-header-type-1__link sb-font-p3"
+                    >
+                      Контакты
+                    </a>
+                  </li>
+                </ul>
+                <a
+                  href="https://skuf.tb.ru/catalog"
+                  class="s-header-type-1__button sb-button-secondary sb-button-scheme-dark sb-button-type_filled"
+                  style="background-color: rgba(0, 0, 0, 0.04)"
+                >
+                  К покупкам
+                </a>
+              </nav>
+            </div>
+            <a
+              href="https://skuf.tb.ru/catalog"
+              class="s-header-type-1__button s-header-type-1__button_tablet-visible sb-button-secondary sb-button-scheme-dark sb-button-type_filled"
+              style="background-color: rgba(0, 0, 0, 0.04)"
+            >
+              К покупкам
+            </a>
+          </div>
+        </div>
+      </section>
+      <section
+        data-type="services"
+        data-subtype="type-6"
+        data-column-count="3"
+        id="iixapxc"
+        class="s-services-type-6 js-catalog sb-text-dark sb-padding-top_l sb-padding-bottom_l"
+      >
+        <link
+          id="services-type-6"
+          rel="stylesheet"
+          href="../assets/styles/services-type-6.css"
+        />
+        <div class="sb-background" style="background: #ffffff"></div>
+        <div class="sb-container sb-m-clear-bottom">
+          <div class="sb-row sb-m-8-bottom">
+            <h2
+              class="sb-col_lg-10 sb-col_md-12 sb-col_sm-12 sb-col_xs-12 sb-font-h2 sb-font-title"
+            >
+              Каталог
+            </h2>
+          </div>
+          <div class="js-catalog__content sb-m-clear-bottom">
+            <div
+              class="sb-input sb-input_search s-services-type-6__input sb-m-10-bottom"
+            >
+              <label class="sb-input__wrapper"
+                ><input
+                  placeholder="Товар или услуга"
+                  class="sb-input__field sb-font-h5 sb-font-title" />
+                <svg
+                  class="sb-input__icon"
+                  aria-hidden="true"
+                  width="24"
+                  height="24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M11 17a6 6 0 114.89-2.524l2.817 2.817a1 1 0 01-1.414 1.414l-2.816-2.816A5.972 5.972 0 0111 17zm0-2a4 4 0 100-8 4 4 0 000 8z"
+                    fill="currentColor"
+                  /></svg
+              ></label>
+              <button
+                class="sb-input__clear js-query-clear"
+                aria-label="Очистить поле"
+                style="display: none"
+              >
+                <svg
+                  width="16"
+                  height="16"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M8 6.586l2.293-2.293a1 1 0 111.414 1.414L9.414 8l2.293 2.293a1 1 0 01-1.414 1.414L8 9.414l-2.293 2.293a1 1 0 01-1.414-1.414L6.586 8 4.293 5.707a1 1 0 011.414-1.414L8 6.586z"
+                    fill="currentColor"
+                  />
+                </svg>
+              </button>
+            </div>
+            <div class="sb-sorting sb-font-p3 sb-m-6-bottom">
+              <div class="sb-sorting__item js-sort-price">
+                <div class="sb-sorting__icon">
+                  <span class="sb-sorting__icon-content"></span>
+                </div>
+                <span>По&nbsp;цене</span>
+              </div>
+              <div class="sb-sorting__item js-sort-title">
+                <div class="sb-sorting__icon">
+                  <span class="sb-sorting__icon-content"></span>
+                </div>
+                <span>По&nbsp;названию</span>
+              </div>
+            </div>
+            <div class="sb-row sb-m-3-top-minus js-catalog__goods-wrapper">
+                <div class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton">
+                    <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                      <div class="s-services-type-6__data">
+                        <!-- Изображение товара -->
+                        <div class="s-services-type-6__image sb-image-square sb-skeleton__image">
+                          <img class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" 
+                               src="../assets/img/3a96ddac-c2d6-4a24-bdaa-985a97602ce1-13145529.jpeg" 
+                               alt="NEON PENESIS ERECTION">
+                        </div>
+                        <!-- Название и цена -->
+                        <h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">
+                          NEON PENESIS ERECTION
+                        </h3>
+                        <div class="s-services-type-6__prices sb-m-24-top">
+                          <div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">
+                            1 600 ₽
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton">
+                <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                  <div class="s-services-type-6__data">
+                    <div
+                      class="s-services-type-6__image sb-image-square sb-skeleton__image"
+                    >
+                      <img
+                        data-image-id="0005f171-071b-48f4-8774-fb83a9750d16"
+                        class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image"
+                        src="../assets/img/0005f171-071b-48f4-8774-fb83a9750d16-13152636.png"
+                        alt="Изображение"
+                      />
+                    </div>
+                    <h3
+                      class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left"
+                    >
+                      NEON PENESIS ERECTION
+                    </h3>
+                    <div class="s-services-type-6__prices sb-m-24-top">
+                      <div
+                        class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left"
+                      >
+                        1 ₽
+                      </div>
+                      <div
+                        class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left"
+                        aria-label="Цена без скидки "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton"
+              >
+                <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                  <div class="s-services-type-6__data">
+                    <div
+                      class="s-services-type-6__image sb-image-square sb-skeleton__image"
+                    >
+                      <img
+                        data-image-id="1f2c70ec-c609-4c31-a3ff-de956e9223d8"
+                        class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image"
+                        src="../assets/img/1f2c70ec-c609-4c31-a3ff-de956e9223d8-13132211.png"
+                        alt="Изображение"
+                      />
+                    </div>
+                    <h3
+                      class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left"
+                    >
+                      Казахстанос
+                    </h3>
+                    <div class="s-services-type-6__prices sb-m-24-top">
+                      <div
+                        class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left"
+                      >
+                        1 ₽
+                      </div>
+                      <div
+                        class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left"
+                        aria-label="Цена без скидки "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton"
+              >
+                <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                  <div class="s-services-type-6__data">
+                    <div
+                      class="s-services-type-6__image sb-image-square sb-skeleton__image"
+                    >
+                      <img
+                        data-image-id="031e60a2-8591-4cf0-9966-fbb4325f8bd4"
+                        class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image"
+                        src="../assets/img/031e60a2-8591-4cf0-9966-fbb4325f8bd4-13258944.png"
+                        alt="Изображение"
+                      />
+                    </div>
+                    <h3
+                      class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left"
+                    >
+                      Антихайп
+                    </h3>
+                    <div class="s-services-type-6__prices sb-m-24-top">
+                      <div
+                        class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left"
+                      >
+                        1 ₽
+                      </div>
+                      <div
+                        class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left"
+                        aria-label="Цена без скидки "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton"
+              >
+                <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                  <div class="s-services-type-6__data">
+                    <div
+                      class="s-services-type-6__image sb-image-square sb-skeleton__image"
+                    >
+                      <img
+                        data-image-id="c74fd8f9-77c7-4338-9ce7-611f8c436cf2"
+                        class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image"
+                        src="../assets/img/c74fd8f9-77c7-4338-9ce7-611f8c436cf2-13144839.png"
+                        alt="Изображение"
+                      />
+                    </div>
+                    <h3
+                      class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left"
+                    >
+                      Узнаю из тысячи
+                    </h3>
+                    <div class="s-services-type-6__prices sb-m-24-top">
+                      <div
+                        class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left"
+                      >
+                        1 ₽
+                      </div>
+                      <div
+                        class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left"
+                        aria-label="Цена без скидки "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton"
+              >
+                <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                  <div class="s-services-type-6__data">
+                    <div
+                      class="s-services-type-6__image sb-image-square sb-skeleton__image"
+                    >
+                      <img
+                        data-image-id="af470615-08a6-4a86-a31d-a1651426bd6f"
+                        class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image"
+                        src="../assets/img/af470615-08a6-4a86-a31d-a1651426bd6f-13150821.png"
+                        alt="Изображение"
+                      />
+                    </div>
+                    <h3
+                      class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left"
+                    >
+                      Котлеты с макарошками
+                    </h3>
+                    <div class="s-services-type-6__prices sb-m-24-top">
+                      <div
+                        class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left"
+                      >
+                        1 ₽
+                      </div>
+                      <div
+                        class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left"
+                        aria-label="Цена без скидки "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton"
+              >
+                <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                  <div class="s-services-type-6__data">
+                    <div
+                      class="s-services-type-6__image sb-image-square sb-skeleton__image"
+                    >
+                      <img
+                        data-image-id="47c4057c-628e-455a-b06d-0af6b9e9df62"
+                        class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image"
+                        src="../assets/img/47c4057c-628e-455a-b06d-0af6b9e9df62-13144029.png"
+                        alt="Изображение"
+                      />
+                    </div>
+                    <h3
+                      class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left"
+                    >
+                      МИЛФХАНТЕР
+                    </h3>
+                    <div class="s-services-type-6__prices sb-m-24-top">
+                      <div
+                        class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left"
+                      >
+                        1 ₽
+                      </div>
+                      <div
+                        class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left"
+                        aria-label="Цена без скидки "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton"
+              >
+                <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                  <div class="s-services-type-6__data">
+                    <div
+                      class="s-services-type-6__image sb-image-square sb-skeleton__image"
+                    >
+                      <img
+                        data-image-id="834f1ddf-e06d-4644-bb0a-664e790d470e"
+                        class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image"
+                        src="../assets/img/834f1ddf-e06d-4644-bb0a-664e790d470e-13134696.png"
+                        alt="Изображение"
+                      />
+                    </div>
+                    <h3
+                      class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left"
+                    >
+                      FRIEREN MC
+                    </h3>
+                    <div class="s-services-type-6__prices sb-m-24-top">
+                      <div
+                        class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left"
+                      >
+                        1 ₽
+                      </div>
+                      <div
+                        class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left"
+                        aria-label="Цена без скидки "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton"
+              >
+                <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                  <div class="s-services-type-6__data">
+                    <div
+                      class="s-services-type-6__image sb-image-square sb-skeleton__image"
+                    >
+                      <img
+                        data-image-id="0727f038-9219-45d4-8c19-1aeab7934c77"
+                        class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image"
+                        src="../assets/img/0727f038-9219-45d4-8c19-1aeab7934c77-13134697.png"
+                        alt="Изображение"
+                      />
+                    </div>
+                    <h3
+                      class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left"
+                    >
+                      Вахоеб
+                    </h3>
+                    <div class="s-services-type-6__prices sb-m-24-top">
+                      <div
+                        class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left"
+                      >
+                        1 ₽
+                      </div>
+                      <div
+                        class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left"
+                        aria-label="Цена без скидки "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton"
+              >
+                <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                  <div class="s-services-type-6__data">
+                    <div
+                      class="s-services-type-6__image sb-image-square sb-skeleton__image"
+                    >
+                      <img
+                        data-image-id="b0d5f57e-0c1a-4053-8549-7a03af5a72c2"
+                        class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image"
+                        src="../assets/img/b0d5f57e-0c1a-4053-8549-7a03af5a72c2-13135168.png"
+                        alt="Изображение"
+                      />
+                    </div>
+                    <h3
+                      class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left"
+                    >
+                      ФУРРИЕБ
+                    </h3>
+                    <div class="s-services-type-6__prices sb-m-24-top">
+                      <div
+                        class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left"
+                      >
+                        1 ₽
+                      </div>
+                      <div
+                        class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left"
+                        aria-label="Цена без скидки "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton"
+              >
+                <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                  <div class="s-services-type-6__data">
+                    <div
+                      class="s-services-type-6__image sb-image-square sb-skeleton__image"
+                    >
+                      <img
+                        data-image-id="c2082c4a-b360-48f8-a4ee-9aac0f3b2370"
+                        class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image"
+                        src="../assets/img/c2082c4a-b360-48f8-a4ee-9aac0f3b2370-13143840.png"
+                        alt="Изображение"
+                      />
+                    </div>
+                    <h3
+                      class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left"
+                    >
+                      Я ГЕЙ
+                    </h3>
+                    <div class="s-services-type-6__prices sb-m-24-top">
+                      <div
+                        class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left"
+                      >
+                        1 ₽
+                      </div>
+                      <div
+                        class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left"
+                        aria-label="Цена без скидки "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="s-services-type-6__item js-catalog__item sb-m-3-top sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12 f sb-skeleton"
+              >
+                <div class="s-services-type-6__item-content sb-m-clear-bottom">
+                  <div class="s-services-type-6__data">
+                    <div
+                      class="s-services-type-6__image sb-image-square sb-skeleton__image"
+                    >
+                      <img
+                        data-image-id="eeb1aec1-dd8f-42f6-8ae7-2ff770012006"
+                        class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image"
+                        src="../assets/img/eeb1aec1-dd8f-42f6-8ae7-2ff770012006-13143838.png"
+                        alt="Изображение"
+                      />
+                    </div>
+                    <h3
+                      class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left"
+                    >
+                      Тачка на прокачку
+                    </h3>
+                    <div class="s-services-type-6__prices sb-m-24-top">
+                      <div
+                        class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left"
+                      >
+                        1 ₽
+                      </div>
+                      <div
+                        class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left"
+                        aria-label="Цена без скидки "
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="s-services-type-6__empty js-catalog__empty sb-m-1-top sb-hidden"
+            >
+              <img
+                class="s-services-type-6__empty-icon"
+                src="https://e26f86a1-a349-40e0-9864-90f0278f7cc5.selcdn.net/tb/0.1.781/images/icons/magnifier.svg"
+                alt="лупа"
+              />
+              <span
+                class="s-services-type-6__empty-text js-catalog__empty-text sb-font-p3 sb-text-opacity sb-hidden"
+                >Здесь будут товары или услуги</span
+              >
+              <span
+                class="s-services-type-6__empty-text js-catalog__not-found-text sb-font-p3 sb-text-opacity sb-hidden"
+                >Нет таких товаров и&nbsp;услуг</span
+              >
+            </div>
+            <div
+              class="s-services-type-6__footer js-catalog__footer sb-hidden sb-m-5-top"
+            >
+              <div
+                class="sb-background sb-background"
+                style="background: inherit"
+              ></div>
+              <div class="s-services-type-6__footer-content">
+                <button class="s-services-type-6__more js-catalog__more">
+                  Загрузить еще
+                </button>
+                <p
+                  class="sb-font-p3 s-services-type-6__footer-text js-catalog__footer-text"
+                >
+                  Вы&nbsp;просмотрели 12&nbsp;из&nbsp;24 товаров
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <template id="image-urls"
+          >[["jqjgzfr",{"id":"e2263dee-a83f-4c65-9ca8-1cb17258d6a3","src":"../assets/img/e2263dee-a83f-4c65-9ca8-1cb17258d6a3-13130966.png"}],["uonnuwx",{"id":"0005f171-071b-48f4-8774-fb83a9750d16","src":"../assets/img/0005f171-071b-48f4-8774-fb83a9750d16-13152636.png"}],["gubofcr",{"id":"1f2c70ec-c609-4c31-a3ff-de956e9223d8","src":"../assets/img/1f2c70ec-c609-4c31-a3ff-de956e9223d8-13132211.png"}],["orusohf",{"id":"031e60a2-8591-4cf0-9966-fbb4325f8bd4","src":"../assets/img/031e60a2-8591-4cf0-9966-fbb4325f8bd4-13258944.png"}],["qqqqfll",{"id":"c74fd8f9-77c7-4338-9ce7-611f8c436cf2","src":"../assets/img/c74fd8f9-77c7-4338-9ce7-611f8c436cf2-13144839.png"}],["aiymvwu",{"id":"af470615-08a6-4a86-a31d-a1651426bd6f","src":"../assets/img/af470615-08a6-4a86-a31d-a1651426bd6f-13150821.png"}],["vmgarko",{"id":"47c4057c-628e-455a-b06d-0af6b9e9df62","src":"../assets/img/47c4057c-628e-455a-b06d-0af6b9e9df62-13144029.png"}],["seuuavu",{"id":"834f1ddf-e06d-4644-bb0a-664e790d470e","src":"../assets/img/834f1ddf-e06d-4644-bb0a-664e790d470e-13134696.png"}],["tlpcngp",{"id":"0727f038-9219-45d4-8c19-1aeab7934c77","src":"../assets/img/0727f038-9219-45d4-8c19-1aeab7934c77-13134697.png"}],["ecajczm",{"id":"b0d5f57e-0c1a-4053-8549-7a03af5a72c2","src":"../assets/img/b0d5f57e-0c1a-4053-8549-7a03af5a72c2-13135168.png"}],["hqgbwkg",{"id":"c2082c4a-b360-48f8-a4ee-9aac0f3b2370","src":"../assets/img/c2082c4a-b360-48f8-a4ee-9aac0f3b2370-13143840.png"}],["frtvuzn",{"id":"eeb1aec1-dd8f-42f6-8ae7-2ff770012006","src":"../assets/img/eeb1aec1-dd8f-42f6-8ae7-2ff770012006-13143838.png"}],["wuyddpl",{"id":"3112deda-7755-46e7-afd3-5e3be4caa95f","src":"../assets/img/3112deda-7755-46e7-afd3-5e3be4caa95f-13143844.png"}],["cskjgzu",{"id":"ce94719c-3d83-487f-a7bc-00edf948fc39","src":"../assets/img/ce94719c-3d83-487f-a7bc-00edf948fc39-13150823.png"}],["zkujsue",{"id":"dd22952f-6bb3-41d8-b845-f21006d5065e","src":"../assets/img/dd22952f-6bb3-41d8-b845-f21006d5065e-13150822.png"}],["snrfgbv",{"id":"26b9fceb-b2c7-462a-b45f-6214b20bf3e5","src":"../assets/img/26b9fceb-b2c7-462a-b45f-6214b20bf3e5-13152785.png"}],["qynibth",{"id":"561e9ae6-56a5-4c98-9ae2-148ac85413c4","src":"../assets/img/561e9ae6-56a5-4c98-9ae2-148ac85413c4-13159331.png"}],["mdiwras",{"id":"08e287da-99d8-4971-9bfa-741e537c18cb","src":"../assets/img/08e287da-99d8-4971-9bfa-741e537c18cb-13152783.png"}],["swnjfdp",{"id":"a2db6d95-e4ab-49d8-ae06-502706ae5615","src":"../assets/img/a2db6d95-e4ab-49d8-ae06-502706ae5615-13152635.png"}],["wkhyckx",{"id":"194c8c76-6ae0-4720-b28a-095f3693c951","src":"../assets/img/194c8c76-6ae0-4720-b28a-095f3693c951-13259558.png"}],["nqrzbal",{"id":"94426798-782a-429c-a11e-6ee25b91bce0","src":"../assets/img/94426798-782a-429c-a11e-6ee25b91bce0-13282962.png"}],["tprkcai",{"id":"4c05ba68-2956-43d5-b23b-4f7a28b0ce61","src":"../assets/img/4c05ba68-2956-43d5-b23b-4f7a28b0ce61-13283286.png"}],["bevqhki",{"id":"d9250a51-e536-4eb6-875c-4d43cfcda883","src":"../assets/img/d9250a51-e536-4eb6-875c-4d43cfcda883-13283287.png"}],["ttnmklt",{"id":"f683edba-1f33-4db1-9d22-1b024a4ebb3a","src":"../assets/img/f683edba-1f33-4db1-9d22-1b024a4ebb3a-13283288.png"}]]</template
+        >
+        <input
+          type="hidden"
+          name="goodsIds"
+          value="jqjgzfr,uonnuwx,gubofcr,orusohf,qqqqfll,aiymvwu,vmgarko,seuuavu,tlpcngp,ecajczm,hqgbwkg,frtvuzn,wuyddpl,cskjgzu,zkujsue,snrfgbv,qynibth,mdiwras,swnjfdp,wkhyckx,nqrzbal,tprkcai,bevqhki,ttnmklt"
+        />
+        <input
+          type="hidden"
+          name="hiddenFields"
+          value="description,priceButton"
+        />
+        <input type="hidden" name="sorting" value="no-sorting" />
+        <input
+          type="hidden"
+          name="hash"
+          value="U2FsdGVkX1/xdqfecKdqm2Hxjg5xA+jZaaBeGH0W4UK4+V3fxCzbZoGZDx34LVnQoIoYIX+WbRLuO5buYgb0R+xzDYjs9S1ybvRXor7Gl6Sypg+7XNgFuETHlEBMcnacTdcqnAVPq7+X3vwogkwZJg&#x3D;&#x3D;"
+        />
+      </section>
+      <section
+        data-type="footer-customer"
+        id="oqbmtgo"
+        class="s-footer-customer-type-5 sb-text-dark sb-padding-top_l sb-padding-bottom_l"
+      >
+        <link
+          id="footer-customer-type-5"
+          rel="stylesheet"
+          href="../assets/styles/footer-customer-type-5.css"
+        />
+        <div class="sb-background" style="background: #ffffff"></div>
+        <div class="sb-container">
+          <div class="sb-row sb-m-clear-bottom">
+            <div
+              class="s-footer-customer-type-5__logo-column sb-col_xs-12 sb-col_sm-12 sb-col_md-12 sb-m-clear-bottom sb-col_lg-4"
+            >
+              <a
+                href="/"
+                target="_self"
+                class="sb-logotype-wrapper s-footer-customer-type-5__image-wrapper sb-logotype-wrapper_fixed_size-m"
+                ><img
+                  class="lazy sb-logotype-wrapper__image"
+                  src="../assets/img/978bc5d8-51fa-4d5a-bd45-b6aff41eff42-13131022.png"
+                  alt="Изображение"
+              /></a>
+              <div class="sb-text-opacity sb-font-p3">СКУФФЛАНДИЯ 2025 ©</div>
+            </div>
+            <div
+              class="s-footer-customer-type-5__links sb-col_xs-12 sb-col_sm-12 sb-col_md-8 sb-col_lg-5"
+            >
+              <nav class="sb-row s-footer-customer-type-5__links-row">
+                <ul class="sb-col_xs-12 sb-col_sm-5 sb-col_md-6 sb-col_lg-5">
+                  <li class="s-footer-customer-type-5__link-wrapper">
+                    <a
+                      href="https://skuf.tb.ru"
+                      class="s-footer-customer-type-5__link sb-font-p3"
+                    >
+                      Главная
+                    </a>
+                  </li>
+                  <li class="s-footer-customer-type-5__link-wrapper">
+                    <a
+                      href="https://skuf.tb.ru/catalog"
+                      class="s-footer-customer-type-5__link sb-font-p3"
+                    >
+                      Каталог
+                    </a>
+                  </li>
+                  <li class="s-footer-customer-type-5__link-wrapper">
+                    <a
+                      href="https://skuf.tb.ru/delivery-payment"
+                      class="s-footer-customer-type-5__link sb-font-p3"
+                    >
+                      Доставка и оплата
+                    </a>
+                  </li>
+                  <li class="s-footer-customer-type-5__link-wrapper">
+                    <a
+                      href="https://skuf.tb.ru/returns"
+                      class="s-footer-customer-type-5__link sb-font-p3"
+                    >
+                      Обмен и возврат
+                    </a>
+                  </li>
+                  <li class="s-footer-customer-type-5__link-wrapper">
+                    <a
+                      href="https://skuf.tb.ru/brand"
+                      class="s-footer-customer-type-5__link sb-font-p3"
+                    >
+                      О нас
+                    </a>
+                  </li>
+                </ul>
+                <ul class="sb-col_xs-12 sb-col_sm-5 sb-col_md-6 sb-col_lg-7">
+                  <li class="s-footer-customer-type-5__link-wrapper">
+                    <a
+                      href="https://skuf.tb.ru/contacts"
+                      class="s-footer-customer-type-5__link sb-font-p3"
+                    >
+                      Контакты
+                    </a>
+                  </li>
+                  <li class="s-footer-customer-type-5__link-wrapper">
+                    <a
+                      href="https://skuf.tb.ru/terms"
+                      class="s-footer-customer-type-5__link sb-font-p3"
+                    >
+                      Оферта
+                    </a>
+                  </li>
+                  <li class="s-footer-customer-type-5__link-wrapper">
+                    <a
+                      href="https://skuf.tb.ru/privacy-policy"
+                      class="s-footer-customer-type-5__link sb-font-p3"
+                    >
+                      Политика конфиденциальности
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+            <div class="sb-col_xs-12 sb-col_sm-12 sb-col_md-4 sb-col_lg-3">
+              <div class="sb-font-p3">
+                <b>+7 (922) 754-85-31</b><br />Круглосуточно<br /><br /><b
+                  >Адрес</b
+                ><br />Москва, м. «Филевский Парк», ул. Кастанаевская, 44Ак2
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
 
+    <template id="popups-stash"> </template>
 
+    <template id="popups-images-stash"> </template>
 
-        <script>
-            partytown = {
-                lib: '/partytown/',
-                forward: ['dataLayer.push'],
-                resolveUrl: (url) => {
-                    if (`${url.host}${url.pathname}` === 'www.google-analytics.com/analytics.js') {
-                        return new URL(`${location.origin}/partytown/google-analytics.js`)
-                    }
-
-                    return url
-                }
-            }
-        </script>
-        <script>!(function(w,p,f,c){if(!window.crossOriginIsolated && !navigator.serviceWorker) return;c=w[p]=w[p]||{};c[f]=(c[f]||[])})(window,'partytown','forward');/* Partytown 0.10.3-dev1734732935152 - MIT builder.io */
-const t={preserveBehavior:!1},e=e=>{if("string"==typeof e)return[e,t];const[n,r=t]=e;return[n,{...t,...r}]},n=Object.freeze((t=>{const e=new Set;let n=[];do{Object.getOwnPropertyNames(n).forEach((t=>{"function"==typeof n[t]&&e.add(t)}))}while((n=Object.getPrototypeOf(n))!==Object.prototype);return Array.from(e)})());!function(t,r,o,i,a,s,c,d,l,p,u=t,f){function h(){f||(f=1,"/"==(c=(s.lib||"/~partytown/")+(s.debug?"debug/":""))[0]&&(l=r.querySelectorAll('script[type="text/partytown"]'),i!=t?i.dispatchEvent(new CustomEvent("pt1",{detail:t})):(d=setTimeout(v,999999999),r.addEventListener("pt0",w),a?y(1):o.serviceWorker?o.serviceWorker.register(c+(s.swPath||"partytown-sw.js"),{scope:c}).then((function(t){t.active?y():t.installing&&t.installing.addEventListener("statechange",(function(t){"activated"==t.target.state&&y()}))}),console.error):v())))}function y(e){p=r.createElement(e?"script":"iframe"),t._pttab=Date.now(),e||(p.style.display="block",p.style.width="0",p.style.height="0",p.style.border="0",p.style.visibility="hidden",p.setAttribute("aria-hidden",!0)),p.src=c+"partytown-"+(e?"atomics.js?v=0.10.3-dev1734732935152":"sandbox-sw.html?"+t._pttab),r.querySelector(s.sandboxParent||"body").appendChild(p)}function v(n,o){for(w(),i==t&&(s.forward||[]).map((function(n){const[r]=e(n);delete t[r.split(".")[0]]})),n=0;n<l.length;n++)(o=r.createElement("script")).innerHTML=l[n].innerHTML,o.nonce=s.nonce,r.head.appendChild(o);p&&p.parentNode.removeChild(p)}function w(){clearTimeout(d)}s=t.partytown||{},i==t&&(s.forward||[]).map((function(r){const[o,{preserveBehavior:i}]=e(r);u=t,o.split(".").map((function(e,r,o){var a;u=u[o[r]]=r+1<o.length?u[o[r]]||(a=o[r+1],n.includes(a)?[]:{}):(()=>{let e=null;if(i){const{methodOrProperty:n,thisObject:r}=((t,e)=>{let n=t;for(let t=0;t<e.length-1;t+=1)n=n[e[t]];return{thisObject:n,methodOrProperty:e.length>0?n[e[e.length-1]]:void 0}})(t,o);"function"==typeof n&&(e=(...t)=>n.apply(r,...t))}return function(){let n;return e&&(n=e(arguments)),(t._ptf=t._ptf||[]).push(o,arguments),n}})()}))})),"complete"==r.readyState?h():(t.addEventListener("DOMContentLoaded",h),t.addEventListener("load",h))}(window,document,navigator,top,window.crossOriginIsolated);</script>
-</head>
-
-<body class="sb-body sb-body_with-footer  raleway-bold__title roboto-regular sb-content-size_m sb-buttons-border_semi-round">
-<div class="site-wrapper" tabindex="0">
-             <section data-type="header" id="zhryjnt" class="s-header-type-1 sb-text-dark"><link
-                            id="header-type-1"
-                            rel="stylesheet"
-                            href="../assets/styles/header-type-1.css"
-                        /><div class=" sb-background" style="background: #FFFFFF;"></div><div class="sb-container"><div class="s-header-type-1__wrapper js-wrapper   s-header-type-1__wrapper_right-align-links   ">  <div class="s-header-type-1__burger js-burger  s-header-type-1__mark-links   s-header-type-1__mark-button "><span class="s-header-type-1__burger-line"></span></div>    <a href="/" target="_self" class="sb-logotype-wrapper sb-logotype-wrapper_adaptive_size-m"><img class="lazy sb-logotype-wrapper__image" src="../assets/img/1031726e-e66e-4aa9-86a9-1ab500f4cdf5-13131008.png" alt="Изображение"></a>    <div class="s-header-type-1__menu-wrapper js-menu "><nav class="s-header-type-1__menu">  <div class=" sb-background sb-background" style="background: #FFFFFF;"></div>   <ul class="s-header-type-1__link-wrapper">  <li class="s-header-type-1__link-item sb-submenu-link">   <a href="https://skuf.tb.ru"     class="s-header-type-1__link sb-font-p3"    >   Главная   </a>    </li>  <li class="s-header-type-1__link-item sb-submenu-link">   <a href="https://skuf.tb.ru/catalog"     class="s-header-type-1__link sb-font-p3"    >   Каталог   </a>    </li>  <li class="s-header-type-1__link-item sb-submenu-link">   <a href="https://skuf.tb.ru/delivery-payment"     class="s-header-type-1__link sb-font-p3"    >   Доставка и оплата   </a>    </li>  <li class="s-header-type-1__link-item sb-submenu-link">   <a href="https://skuf.tb.ru/returns"     class="s-header-type-1__link sb-font-p3"    >   Обмен и возврат   </a>    </li>  <li class="s-header-type-1__link-item sb-submenu-link">   <a href="https://skuf.tb.ru/brand"     class="s-header-type-1__link sb-font-p3"    >   О нас   </a>    </li>  <li class="s-header-type-1__link-item sb-submenu-link">   <a href="https://skuf.tb.ru/contacts"     class="s-header-type-1__link sb-font-p3"    >   Контакты   </a>    </li>  </ul>     <a href="https://skuf.tb.ru/catalog"     class="s-header-type-1__button sb-button-secondary sb-button-scheme-dark sb-button-type_filled" style="background-color: rgba(0,0,0,0.04);"   >   К покупкам   </a>    </nav></div>   <a href="https://skuf.tb.ru/catalog"     class="s-header-type-1__button s-header-type-1__button_tablet-visible sb-button-secondary sb-button-scheme-dark sb-button-type_filled" style="background-color: rgba(0,0,0,0.04);"   >   К покупкам   </a>    </div></div> </section>                     <section data-type="services" data-subtype="type-6" data-column-count="3" id="iixapxc" class="s-services-type-6 js-catalog sb-text-dark sb-padding-top_l sb-padding-bottom_l"><link
-                            id="services-type-6"
-                            rel="stylesheet"
-                            href="../assets/styles/services-type-6.css"
-                        /><div class=" sb-background" style="background: #ffffff;"></div><div class="sb-container sb-m-clear-bottom">  <div class="sb-row sb-m-8-bottom"><h2 class="sb-col_lg-10 sb-col_md-12 sb-col_sm-12 sb-col_xs-12 sb-font-h2 sb-font-title">Каталог</h2></div>  <div class="js-catalog__content sb-m-clear-bottom">   <div class="sb-input sb-input_search s-services-type-6__input sb-m-10-bottom"><label class="sb-input__wrapper"><input placeholder="Товар или услуга" class="sb-input__field sb-font-h5 sb-font-title"> <svg class="sb-input__icon" aria-hidden="true" width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M11 17a6 6 0 114.89-2.524l2.817 2.817a1 1 0 01-1.414 1.414l-2.816-2.816A5.972 5.972 0 0111 17zm0-2a4 4 0 100-8 4 4 0 000 8z" fill="currentColor"/></svg></label> <button class="sb-input__clear js-query-clear" aria-label="Очистить поле" style="display: none;"><svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M8 6.586l2.293-2.293a1 1 0 111.414 1.414L9.414 8l2.293 2.293a1 1 0 01-1.414 1.414L8 9.414l-2.293 2.293a1 1 0 01-1.414-1.414L6.586 8 4.293 5.707a1 1 0 011.414-1.414L8 6.586z" fill="currentColor"/></svg></button></div>   <div class="sb-sorting sb-font-p3 sb-m-6-bottom"><div class="sb-sorting__item js-sort-price"><div class="sb-sorting__icon"><span class="sb-sorting__icon-content"></span></div><span>По&nbsp;цене</span></div><div class="sb-sorting__item js-sort-title"><div class="sb-sorting__icon"><span class="sb-sorting__icon-content"></span></div><span>По&nbsp;названию</span></div></div>   <div class="sb-row sb-m-3-top-minus js-catalog__goods-wrapper">  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="e2263dee-a83f-4c65-9ca8-1cb17258d6a3" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/e2263dee-a83f-4c65-9ca8-1cb17258d6a3-13130966.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">На Берлин</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="0005f171-071b-48f4-8774-fb83a9750d16" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/0005f171-071b-48f4-8774-fb83a9750d16-13152636.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">NEON PENESIS ERECTION</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="1f2c70ec-c609-4c31-a3ff-de956e9223d8" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/1f2c70ec-c609-4c31-a3ff-de956e9223d8-13132211.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">Казахстанос</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="031e60a2-8591-4cf0-9966-fbb4325f8bd4" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/031e60a2-8591-4cf0-9966-fbb4325f8bd4-13258944.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">Антихайп</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="c74fd8f9-77c7-4338-9ce7-611f8c436cf2" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/c74fd8f9-77c7-4338-9ce7-611f8c436cf2-13144839.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">Узнаю из тысячи</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="af470615-08a6-4a86-a31d-a1651426bd6f" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/af470615-08a6-4a86-a31d-a1651426bd6f-13150821.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">Котлеты с макарошками</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="47c4057c-628e-455a-b06d-0af6b9e9df62" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/47c4057c-628e-455a-b06d-0af6b9e9df62-13144029.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">МИЛФХАНТЕР</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="834f1ddf-e06d-4644-bb0a-664e790d470e" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/834f1ddf-e06d-4644-bb0a-664e790d470e-13134696.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">FRIEREN MC</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="0727f038-9219-45d4-8c19-1aeab7934c77" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/0727f038-9219-45d4-8c19-1aeab7934c77-13134697.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">Вахоеб</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="b0d5f57e-0c1a-4053-8549-7a03af5a72c2" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/b0d5f57e-0c1a-4053-8549-7a03af5a72c2-13135168.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">ФУРРИЕБ</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="c2082c4a-b360-48f8-a4ee-9aac0f3b2370" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/c2082c4a-b360-48f8-a4ee-9aac0f3b2370-13143840.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">Я ГЕЙ</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  <div class="s-services-type-6__item js-catalog__item sb-m-3-top    sb-col_lg-4 sb-col_md-4 sb-col_sm-6 sb-col_xs-12     f sb-skeleton"><div class="s-services-type-6__item-content sb-m-clear-bottom"><div class="s-services-type-6__data"><div class="s-services-type-6__image sb-image-square sb-skeleton__image"><img data-image-id="eeb1aec1-dd8f-42f6-8ae7-2ff770012006" class="sb-image-crop sb-image-crop_loaded lazy js-cart-goods-image" src="../assets/img/eeb1aec1-dd8f-42f6-8ae7-2ff770012006-13143838.png" alt="Изображение"></div><h3 class="s-services-type-6__subtitle sb-font-h5 sb-font-title sb-pre-wrap sb-skeleton__title sb-align-left">Тачка на прокачку</h3><div class="s-services-type-6__prices sb-m-24-top"><div class="s-services-type-6__price sb-font-p2 sb-skeleton__price sb-align-left">1 ₽</div> <div class="s-services-type-6__old-price sb-font-p2 sb-crossed sb-text-opacity sb-skeleton__price sb-align-left" aria-label="Цена без скидки "></div></div></div>  </div></div>  </div><div class="s-services-type-6__empty js-catalog__empty sb-m-1-top sb-hidden"><img class="s-services-type-6__empty-icon" src="https://e26f86a1-a349-40e0-9864-90f0278f7cc5.selcdn.net/tb/0.1.781/images/icons/magnifier.svg" alt="лупа"> <span class="s-services-type-6__empty-text js-catalog__empty-text sb-font-p3 sb-text-opacity sb-hidden">Здесь будут товары или услуги</span> <span class="s-services-type-6__empty-text js-catalog__not-found-text sb-font-p3 sb-text-opacity sb-hidden">Нет таких товаров и&nbsp;услуг</span></div><div class="s-services-type-6__footer js-catalog__footer sb-hidden sb-m-5-top "> <div class=" sb-background sb-background" style="background: inherit;"></div> <div class="s-services-type-6__footer-content"><button class="s-services-type-6__more js-catalog__more">Загрузить еще</button><p class="sb-font-p3 s-services-type-6__footer-text js-catalog__footer-text">Вы&nbsp;просмотрели 12&nbsp;из&nbsp;24 товаров</p></div></div></div></div> <template id="image-urls">[["jqjgzfr",{"id":"e2263dee-a83f-4c65-9ca8-1cb17258d6a3","src":"../assets/img/e2263dee-a83f-4c65-9ca8-1cb17258d6a3-13130966.png"}],["uonnuwx",{"id":"0005f171-071b-48f4-8774-fb83a9750d16","src":"../assets/img/0005f171-071b-48f4-8774-fb83a9750d16-13152636.png"}],["gubofcr",{"id":"1f2c70ec-c609-4c31-a3ff-de956e9223d8","src":"../assets/img/1f2c70ec-c609-4c31-a3ff-de956e9223d8-13132211.png"}],["orusohf",{"id":"031e60a2-8591-4cf0-9966-fbb4325f8bd4","src":"../assets/img/031e60a2-8591-4cf0-9966-fbb4325f8bd4-13258944.png"}],["qqqqfll",{"id":"c74fd8f9-77c7-4338-9ce7-611f8c436cf2","src":"../assets/img/c74fd8f9-77c7-4338-9ce7-611f8c436cf2-13144839.png"}],["aiymvwu",{"id":"af470615-08a6-4a86-a31d-a1651426bd6f","src":"../assets/img/af470615-08a6-4a86-a31d-a1651426bd6f-13150821.png"}],["vmgarko",{"id":"47c4057c-628e-455a-b06d-0af6b9e9df62","src":"../assets/img/47c4057c-628e-455a-b06d-0af6b9e9df62-13144029.png"}],["seuuavu",{"id":"834f1ddf-e06d-4644-bb0a-664e790d470e","src":"../assets/img/834f1ddf-e06d-4644-bb0a-664e790d470e-13134696.png"}],["tlpcngp",{"id":"0727f038-9219-45d4-8c19-1aeab7934c77","src":"../assets/img/0727f038-9219-45d4-8c19-1aeab7934c77-13134697.png"}],["ecajczm",{"id":"b0d5f57e-0c1a-4053-8549-7a03af5a72c2","src":"../assets/img/b0d5f57e-0c1a-4053-8549-7a03af5a72c2-13135168.png"}],["hqgbwkg",{"id":"c2082c4a-b360-48f8-a4ee-9aac0f3b2370","src":"../assets/img/c2082c4a-b360-48f8-a4ee-9aac0f3b2370-13143840.png"}],["frtvuzn",{"id":"eeb1aec1-dd8f-42f6-8ae7-2ff770012006","src":"../assets/img/eeb1aec1-dd8f-42f6-8ae7-2ff770012006-13143838.png"}],["wuyddpl",{"id":"3112deda-7755-46e7-afd3-5e3be4caa95f","src":"../assets/img/3112deda-7755-46e7-afd3-5e3be4caa95f-13143844.png"}],["cskjgzu",{"id":"ce94719c-3d83-487f-a7bc-00edf948fc39","src":"../assets/img/ce94719c-3d83-487f-a7bc-00edf948fc39-13150823.png"}],["zkujsue",{"id":"dd22952f-6bb3-41d8-b845-f21006d5065e","src":"../assets/img/dd22952f-6bb3-41d8-b845-f21006d5065e-13150822.png"}],["snrfgbv",{"id":"26b9fceb-b2c7-462a-b45f-6214b20bf3e5","src":"../assets/img/26b9fceb-b2c7-462a-b45f-6214b20bf3e5-13152785.png"}],["qynibth",{"id":"561e9ae6-56a5-4c98-9ae2-148ac85413c4","src":"../assets/img/561e9ae6-56a5-4c98-9ae2-148ac85413c4-13159331.png"}],["mdiwras",{"id":"08e287da-99d8-4971-9bfa-741e537c18cb","src":"../assets/img/08e287da-99d8-4971-9bfa-741e537c18cb-13152783.png"}],["swnjfdp",{"id":"a2db6d95-e4ab-49d8-ae06-502706ae5615","src":"../assets/img/a2db6d95-e4ab-49d8-ae06-502706ae5615-13152635.png"}],["wkhyckx",{"id":"194c8c76-6ae0-4720-b28a-095f3693c951","src":"../assets/img/194c8c76-6ae0-4720-b28a-095f3693c951-13259558.png"}],["nqrzbal",{"id":"94426798-782a-429c-a11e-6ee25b91bce0","src":"../assets/img/94426798-782a-429c-a11e-6ee25b91bce0-13282962.png"}],["tprkcai",{"id":"4c05ba68-2956-43d5-b23b-4f7a28b0ce61","src":"../assets/img/4c05ba68-2956-43d5-b23b-4f7a28b0ce61-13283286.png"}],["bevqhki",{"id":"d9250a51-e536-4eb6-875c-4d43cfcda883","src":"../assets/img/d9250a51-e536-4eb6-875c-4d43cfcda883-13283287.png"}],["ttnmklt",{"id":"f683edba-1f33-4db1-9d22-1b024a4ebb3a","src":"../assets/img/f683edba-1f33-4db1-9d22-1b024a4ebb3a-13283288.png"}]]</template> <input type="hidden" name="goodsIds" value="jqjgzfr,uonnuwx,gubofcr,orusohf,qqqqfll,aiymvwu,vmgarko,seuuavu,tlpcngp,ecajczm,hqgbwkg,frtvuzn,wuyddpl,cskjgzu,zkujsue,snrfgbv,qynibth,mdiwras,swnjfdp,wkhyckx,nqrzbal,tprkcai,bevqhki,ttnmklt"> <input type="hidden" name="hiddenFields" value=description,priceButton> <input type="hidden" name="sorting" value="no-sorting"> <input type="hidden" name="hash" value="U2FsdGVkX1/xdqfecKdqm2Hxjg5xA+jZaaBeGH0W4UK4+V3fxCzbZoGZDx34LVnQoIoYIX+WbRLuO5buYgb0R+xzDYjs9S1ybvRXor7Gl6Sypg+7XNgFuETHlEBMcnacTdcqnAVPq7+X3vwogkwZJg&#x3D;&#x3D;"> </section>                  <section data-type="footer-customer" id="oqbmtgo" class="s-footer-customer-type-5 sb-text-dark sb-padding-top_l sb-padding-bottom_l"><link
-                            id="footer-customer-type-5"
-                            rel="stylesheet"
-                            href="../assets/styles/footer-customer-type-5.css"
-                        /><div class=" sb-background" style="background: #ffffff;"></div><div class="sb-container"><div class="sb-row sb-m-clear-bottom">  <div class="s-footer-customer-type-5__logo-column sb-col_xs-12 sb-col_sm-12 sb-col_md-12 sb-m-clear-bottom   sb-col_lg-4  ">   <a href="/" target="_self" class="sb-logotype-wrapper s-footer-customer-type-5__image-wrapper sb-logotype-wrapper_fixed_size-m"><img class="lazy sb-logotype-wrapper__image" src="../assets/img/978bc5d8-51fa-4d5a-bd45-b6aff41eff42-13131022.png" alt="Изображение"></a>   <div class="sb-text-opacity sb-font-p3">СКУФФЛАНДИЯ 2025 ©</div></div>   <div class="s-footer-customer-type-5__links sb-col_xs-12 sb-col_sm-12   sb-col_md-8 sb-col_lg-5  "><nav class="sb-row s-footer-customer-type-5__links-row"><ul class="sb-col_xs-12 sb-col_sm-5 sb-col_md-6 sb-col_lg-5">   <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://skuf.tb.ru"   class="s-footer-customer-type-5__link sb-font-p3"    >   Главная   </a>  </li>     <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://skuf.tb.ru/catalog"   class="s-footer-customer-type-5__link sb-font-p3"    >   Каталог   </a>  </li>     <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://skuf.tb.ru/delivery-payment"   class="s-footer-customer-type-5__link sb-font-p3"    >   Доставка и оплата   </a>  </li>     <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://skuf.tb.ru/returns"   class="s-footer-customer-type-5__link sb-font-p3"    >   Обмен и возврат   </a>  </li>     <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://skuf.tb.ru/brand"   class="s-footer-customer-type-5__link sb-font-p3"    >   О нас   </a>  </li>             </ul><ul class="sb-col_xs-12 sb-col_sm-5 sb-col_md-6 sb-col_lg-7">                  <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://skuf.tb.ru/contacts"   class="s-footer-customer-type-5__link sb-font-p3"    >   Контакты   </a>  </li>     <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://skuf.tb.ru/terms"   class="s-footer-customer-type-5__link sb-font-p3"    >   Оферта   </a>  </li>     <li class="s-footer-customer-type-5__link-wrapper">  <a href="https://skuf.tb.ru/privacy-policy"   class="s-footer-customer-type-5__link sb-font-p3"    >   Политика конфиденциальности   </a>  </li>    </ul></nav></div>   <div class="sb-col_xs-12 sb-col_sm-12  sb-col_md-4 sb-col_lg-3 "><div class="sb-font-p3"><b>+7 (922) 754-85-31</b><br>Круглосуточно<br><br><b>Адрес</b><br>Москва, м. «Филевский Парк», ул. Кастанаевская, 44Ак2</div></div>  </div></div> </section> </div>
-
-<template id="popups-stash">
-</template>
-
-<template id="popups-images-stash">
-</template>
-
-<script>
-    window.tbConfig={"inFrame":false,"enableLazyLoading":false,"enableJsLazyLoading":false,"enableDynamicGoods":true,"isPreviewMode":false,"hasPromocodes":false,"posScriptUrl":"https://forma.tinkoff.ru/static/onlineScript.js","enableMessengerLazyLoading":true,"enableCssScrollSnapSlider":true,"usePublicSitesOrdersApi":false,"yandexMapsApiKey":"a9eba83c-b342-4dfe-ab11-2c7cbd6839cb","messengerLink":"https://w.tb.ru/open-messenger/widget?wId=W-57100D147B1048549B8AEAF9902C621F","cartHash":"U2FsdGVkX1+d13HYwqKdWARauMrYA9K0l6/kEdPdO0OSIAsjSziuEVLD+edvcgA3IuQzFN8hc2e3cC5BpanZeo7l8MX6Mk2r5ffRN/hd6uI8npOl0NOuH5Vw/EO+v+MZ","enableSitesCheckoutIntegration":false,"yaMetricsCounter":100685635,"staticPath":"https://e26f86a1-a349-40e0-9864-90f0278f7cc5.selcdn.net/tb/0.1.781"};
-    window.tbConfig.isExported=true;window.tbConfig.exportedApiUrl='https://a.tb.ru';
-    window.tbConfig.apiUrl=!window.tbConfig.isExported ? '' : window.tbConfig.exportedApiUrl;
-    window.tbConfig.isModern='noModule'in HTMLScriptElement.prototype;
-    (function (){var n,o="chrome"in window,e="InstallTrigger"in window;function t(n){var o=document.createElement("script");return o.src="".concat(window.tbConfig.staticPath,"/js/").concat(n),window.tbConfig.isModern&&(o.type="module",o.src=o.src.replace(".js",".modern.js")),o.defer=!0,o}function d(n){var o=t(n);document.head.appendChild(o)}window.tbConfig.enableLazyLoading&&d("lazy-load.js"),"attachShadow"in Element.prototype||d("lit-polyfill-support.js"),d("webcomponents-loader.js"),o||e||d("smoothscroll.js"),n=t("front.js"),document.addEventListener("DOMContentLoaded",(function(){document.head.appendChild(n)}));})()
-</script>
+    <script>
+      window.tbConfig = {
+        inFrame: false,
+        enableLazyLoading: false,
+        enableJsLazyLoading: false,
+        enableDynamicGoods: true,
+        isPreviewMode: false,
+        hasPromocodes: false,
+        posScriptUrl: "https://forma.tinkoff.ru/static/onlineScript.js",
+        enableMessengerLazyLoading: true,
+        enableCssScrollSnapSlider: true,
+        usePublicSitesOrdersApi: false,
+        yandexMapsApiKey: "a9eba83c-b342-4dfe-ab11-2c7cbd6839cb",
+        messengerLink:
+          "https://w.tb.ru/open-messenger/widget?wId=W-57100D147B1048549B8AEAF9902C621F",
+        cartHash:
+          "U2FsdGVkX1+d13HYwqKdWARauMrYA9K0l6/kEdPdO0OSIAsjSziuEVLD+edvcgA3IuQzFN8hc2e3cC5BpanZeo7l8MX6Mk2r5ffRN/hd6uI8npOl0NOuH5Vw/EO+v+MZ",
+        enableSitesCheckoutIntegration: false,
+        yaMetricsCounter: 100685635,
+        staticPath:
+          "https://e26f86a1-a349-40e0-9864-90f0278f7cc5.selcdn.net/tb/0.1.781",
+      };
+      window.tbConfig.isExported = true;
+      window.tbConfig.exportedApiUrl = "https://a.tb.ru";
+      window.tbConfig.apiUrl = !window.tbConfig.isExported
+        ? ""
+        : window.tbConfig.exportedApiUrl;
+      window.tbConfig.isModern = "noModule" in HTMLScriptElement.prototype;
+      (function () {
+        var n,
+          o = "chrome" in window,
+          e = "InstallTrigger" in window;
+        function t(n) {
+          var o = document.createElement("script");
+          return (
+            (o.src = "".concat(window.tbConfig.staticPath, "/js/").concat(n)),
+            window.tbConfig.isModern &&
+              ((o.type = "module"),
+              (o.src = o.src.replace(".js", ".modern.js"))),
+            (o.defer = !0),
+            o
+          );
+        }
+        function d(n) {
+          var o = t(n);
+          document.head.appendChild(o);
+        }
+        window.tbConfig.enableLazyLoading && d("lazy-load.js"),
+          "attachShadow" in Element.prototype || d("lit-polyfill-support.js"),
+          d("webcomponents-loader.js"),
+          o || e || d("smoothscroll.js"),
+          (n = t("front.js")),
+          document.addEventListener("DOMContentLoaded", function () {
+            document.head.appendChild(n);
+          });
+      })();
+    </script>
 
     <link rel="stylesheet" href="../assets/styles/size-m.css" />
     <link rel="stylesheet" href="../assets/styles/popups.css" />
     <link rel="stylesheet" href="../assets/styles/styles-helpers.css" />
 
+    <section data-type="footer" class="s-footer">
+      <link id="footer" rel="stylesheet" href="../assets/styles/footer.css" />
+      <a
+        href="https://www.tbank.ru/business/website-builder?utm_source&#x3D;sites.footer&amp;utm_medium&#x3D;ref&amp;utm_campaign&#x3D;sites.main"
+        class="s-footer__link"
+        ><div>Конструктор сайтов&nbsp;от&nbsp;</div>
+        <img
+          class="s-footer__logo_v2"
+          alt="Т-Банк"
+          src="https://e26f86a1-a349-40e0-9864-90f0278f7cc5.selcdn.net/tb/0.1.781/images/logos/T-BANK_logo_white.svg "
+        />
+      </a>
+    </section>
+    <section id="yandex-metrica-script" data-type="script">
+      <div class="sb-container sb-container_no-position">
+        <!-- Yandex.Metrika counter -->
+        <script type="text/javascript">
+          (function (m, e, t, r, i, k, a) {
+            m[i] =
+              m[i] ||
+              function () {
+                (m[i].a = m[i].a || []).push(arguments);
+              };
+            m[i].l = 1 * new Date();
+            for (var j = 0; j < document.scripts.length; j++) {
+              if (document.scripts[j].src === r) {
+                return;
+              }
+            }
+            (k = e.createElement(t)),
+              (a = e.getElementsByTagName(t)[0]),
+              (k.async = 1),
+              (k.src = r),
+              a.parentNode.insertBefore(k, a);
+          })(window, document, "script", "//mc.yandex.ru/metrika/tag.js", "ym");
 
-    <section data-type="footer" class="s-footer"><link
-                    id="footer"
-                    rel="stylesheet"
-                    href="../assets/styles/footer.css"
-                /> <a href="https://www.tbank.ru/business/website-builder?utm_source&#x3D;sites.footer&amp;utm_medium&#x3D;ref&amp;utm_campaign&#x3D;sites.main" class="s-footer__link"><div>Конструктор сайтов&nbsp;от&nbsp;</div><img class="s-footer__logo_v2" alt="Т-Банк" src="https://e26f86a1-a349-40e0-9864-90f0278f7cc5.selcdn.net/tb/0.1.781/images/logos/T-BANK_logo_white.svg "> </a> </section>      <section id="yandex-metrica-script" data-type="script"><div class="sb-container sb-container_no-position"> 
-    <!-- Yandex.Metrika counter -->
-    <script type="text/javascript">
-        (function(m,e,t,r,i,k,a){
-            m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-            m[i].l=1*new Date();
-            for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-            k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-        })(window, document,'script','//mc.yandex.ru/metrika/tag.js', 'ym');
-    
-        ym(100685635, 'init', {accurateTrackBounce:true, trackLinks:true, webvisor:true, clickmap:true, params: {__ym: {isFromApi: 'yesIsFromApi'}}});
-    </script>
-    <noscript><div><img src="https://mc.yandex.ru/watch/100685635" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-    <!-- /Yandex.Metrika counter -->
-    
-    
-     </div></section>  
-</body>
+          ym(100685635, "init", {
+            accurateTrackBounce: true,
+            trackLinks: true,
+            webvisor: true,
+            clickmap: true,
+            params: { __ym: { isFromApi: "yesIsFromApi" } },
+          });
+        </script>
+        <noscript
+          ><div>
+            <img
+              src="https://mc.yandex.ru/watch/100685635"
+              style="position: absolute; left: -9999px"
+              alt=""
+            /></div
+        ></noscript>
+        <!-- /Yandex.Metrika counter -->
+      </div>
+    </section>
+  </body>
 </html>
